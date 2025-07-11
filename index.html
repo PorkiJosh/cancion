@@ -22,51 +22,48 @@
       text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
     }
 
-    .video-container {
-      position: relative;
+    iframe {
       width: 100%;
-      padding-bottom: 56.25%; /* Relación 16:9 */
-      height: 0;
-      overflow: hidden;
-    }
-
-    .video-container video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      max-width: 720px;
+      height: 405px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     .download-link {
-      display: block;
-      margin-top: 10px;
-      text-align: center;
-      font-family: sans-serif;
-      background-color: #007bff;
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #ff69b4;
       color: white;
-      padding: 10px;
-      border-radius: 5px;
+      padding: 12px 20px;
+      border-radius: 30px;
       text-decoration: none;
-      width: max-content;
-      margin: 15px auto 0;
+      font-size: 16px;
+      transition: 0.3s;
     }
 
     .download-link:hover {
-      background-color: #0056b3;
+      background-color: #e754a3;
     }
   </style>
 </head>
 <body>
   <h1>💖 Tu Video Especial, para ti KIARA 💖</h1>
-  <div class="video-container">
-    <video controls>
-      <source src="video.mp4" type="video/mp4">
-      Tu navegador no soporta la etiqueta de video.
-    </video>
-  </div>
 
-  <a href="tu-video.mp4" download class="download-link">Descargar Video</a>
+  <!-- Reproducción del video desde Google Drive -->
+  <iframe 
+    src="https://drive.google.com/file/d/1_aThitBg5gERc4T5joXryoPcI9d5gqdi/preview" 
+    allow="autoplay">
+  </iframe>
+
+  <!-- Botón para descargar el video -->
+  <a 
+    class="download-link" 
+    href="https://drive.google.com/uc?export=download&id=1_aThitBg5gERc4T5joXryoPcI9d5gqdi" 
+    target="_blank">
+    Descargar Video
+  </a>
 
 </body>
 </html>
